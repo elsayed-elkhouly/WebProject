@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./webfonts/all.min.css">
+    <link rel="stylesheet" href="./css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Bookmark</title>
+</head>
+<body>
+    
+    <main>
+        <section class="container w-75">
+            <h1 class="text-center mt-5 mb-4 position-relative">Bookmarker</h1>
+            <hr>
+            <h2 class="text-center fs-4 fs-md-3 fs-lg-2">
+                <i class="fa-solid fa-bookmark mx-2"></i>
+                    Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark mx-2"></i>
+            </h2>
+
+            <div class="site-name d-flex flex-column my-3">
+                <label for="siteName" class="pb-2 fw-semibold"><i class="fa-solid fa-book-bookmark mx-1"></i> Site Name</label>
+                <input type="text" id="siteName" class="form-control rounded-2 border-1 p-2 is-invalid" placeholder="Bookmark Name" oninput="validateName()">
+            </div>
+            <div class="site-url d-flex flex-column my-3">
+                <label for="siteUrl" class="pb-2 fw-semibold"><i class="fa-solid fa-link mx-1"></i> Site URL</label>
+                <input type="text" id="siteUrl" class="form-control rounded-2 border-1 p-2 is-invalid" placeholder="Website URL" oninput="validateUrl()">
+                <div id="urlAlert" class="text-danger fw-semibold d-none">
+                    Please Enter a Valid URL
+                </div>
+            </div>
+            <button class="btn px-5 mx-auto d-block mb-4" onclick="addUrl()">
+                Submit
+            </button>
+            <hr>
+            <table class="table mt-4 text-center bg-light">
+                <thead>
+                    <tr>
+                        <th>
+                            Index
+                        </th>
+                        <th>
+                            Website Name
+                        </th>
+                        <th>
+                            Visit
+                        </th>
+                        <th>
+                            Delete
+                        </th>
+                    </tr>
+                <tbody id="bookmark">
+                    
+                </tbody>
+                </thead>
+            </table>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
